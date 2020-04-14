@@ -1,0 +1,546 @@
+/* ****************** setup code starts here ****************** */
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article, aside, footer, header, nav, section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+figcaption, figure, main {
+    display: block
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b, strong {
+    font-weight: inherit
+}
+
+b, strong {
+    font-weight: bolder
+}
+
+code, kbd, samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+audio, video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+img {
+    border-style: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button, input {
+    overflow: visible
+}
+
+button, select {
+    text-transform: none
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details, menu {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: '';
+    clear: both;
+    height: 0;
+}
+
+html {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(00 0 0);
+    overflow: hidden;
+}
+/* /****************** setup code ends here ****************** */
+
+/* ****************** general styles start here ****************** */
+/*  to set the base font-size */
+html {
+    font-size: 62.5%;
+}
+
+/* to style the body tag */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.7rem;
+    color: #0F0F0F;
+    line-height: 2.9rem;
+    background-color: #F7F7F7;
+}
+
+/* to style the wrapper class */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* to reset the margin and padding for some elements */
+body, ol, h1, h2, button, input, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+/* to style all the links */
+a {
+    text-decoration: none;
+    color: inherit;
+    font: inherit;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* to style all the images */
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* to style all the buttons */
+button {
+    background-color: #bc0120;
+    height: 40px;
+    width: 250px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+
+/* to style the buttons when hover or focus */
+button:hover, button:focus {
+    background-color: #800519;
+    cursor: pointer;
+}
+
+/* to style the heading(1-2)*/
+h1, h2 {
+    color: #5C5C5C;
+    text-transform: capitalize;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Bitter', serif;
+}
+
+/* to style heading 1 */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 5vh;
+}
+
+/* to style heading 2 */
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2vh;
+}
+/* ****************** general styles end here ****************** */
+
+/* ****************** header styles start here ****************** */
+/* to style the header */
+header {
+    background-color: #fff;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bc0120;
+    border-bottom: 1px solid #DCDBDB;
+    font-size: 2.5rem;
+}
+
+/* to style the icon in the header */
+header i {
+    cursor: pointer;
+}
+/* ****************** header styles end here ****************** */
+
+/* ****************** main styles start here ****************** */
+main {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* to style the section */
+section {
+    padding-left: 5%;
+    padding-top: 2vh;
+    padding: 5vh 0;
+}
+
+/* to stle all the forms and the .imgUploadForm div */
+form, .imgUploadForm div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* to style  imgUploadForm div and the .imgUploadForm */
+.imgUploadForm div, .imgUploadForm {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+/* to style the img in the .imgUploadForm */
+.imgUploadForm img {
+    width: 300px;
+    margin-bottom: 5vh;
+    border: 1px solid #DCDBDB;
+    box-shadow: -6px 6px 2px -3px rgba(100, 100, 100, .1);
+}
+
+/* to style the button in the imgUploadForm  */
+.imgUploadForm button {
+    margin-bottom: 2vh;
+}
+
+/* to style the fileUploadDiv */
+.fileUploadtDiv {
+    color: #DCDBDB;
+    height: 150px;
+    width: 200px;
+    border-radius: 100px;
+    position: relative;
+}
+
+/* to style the icon in the fileUploadDiv */
+.fileUploadtDiv i {
+    font-size: 15rem;
+}
+
+/* to style the input of type file */
+input[type="file"] {
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* to style the dataform */
+.dataForm {
+    border-radius: 2px;
+}
+
+/* to style the inputs and the thext area in the dataForm */
+.dataForm input, .dataForm textarea {
+    border: none;
+    width: 100%;
+    height: 80%;
+    font: inherit;
+    padding-left: 10px;
+}
+
+/* to style the dataForm div */
+.dataForm div {
+    padding: 9px;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+/* to style the inputDiv */
+.inputDiv {
+    height: 65px;
+}
+
+/* to style the textarea Div */
+.textareaDiv {
+    height: 120px;
+}
+
+/* to style the last div in the data form */
+.dataForm div:last-child {
+    border: none;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* to style all the labels in the form */
+.dataForm label {
+    display: block;
+    float: left;
+    margin-top: -25px;
+    background: #FFFFFF;
+    padding: 2px 5px 2px 5px;
+    color: rgba(146, 140, 140);
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* to style the input and text area in focus state */
+.dataForm input:focus, .dataForm textarea:focus {
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+
+/* to style the textarea */
+.dataForm textarea {
+    resize: none;
+    padding-top: 5px;
+}
+
+/* to style the butto in the data form */
+.dataForm button {
+    width: 100%;
+}
+
+/* to style the information section */
+.information {
+    padding: 3vh 8%;
+}
+
+/* to style the ordered list in the information section */
+ol {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+/* to style the list items and the button in the informtion section */
+li, .information button {
+    margin-bottom: 2vh;
+}
+
+/* to style the div that contains the button */
+.information div {
+    text-align: center;
+}
+/* ****************** main styles end here ****************** */
+
+/* ****************** footer styles start here ****************** */
+footer {
+    background-color: #fbf5ed;
+    color: #5C5C5C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ****************** footer styles end here ****************** */
+
+/* ****************** media quries start here ****************** */
+@media(max-width:1165px) {
+    h1 {
+        font-size: calc(1vw + 1.6rem);
+    }
+    h2 {
+        font-size:  calc(0.9vw + 1.6rem);
+    }
+    .wrapper {
+        width: 60%;
+    }
+}
+
+@media(max-width:850px) {
+    .wrapper {
+        width: 70%;
+    }
+}
+
+@media(max-width:650px) {
+    .imgUploadForm img {
+        width: 280px;
+    }
+    .wrapper {
+        width: 98%;
+    }
+}
+
+/* ****************** media quries end here  ****************** */
