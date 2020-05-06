@@ -1,4 +1,5 @@
 /* ****************** setup code starts here ****************** */
+
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -243,15 +244,19 @@ html {
     clip: rect(00 0 0);
     overflow: hidden;
 }
+
 /* /****************** setup code ends here ****************** */
 
 /* ****************** general styles start here ****************** */
+
 /*  to set the base font-size */
+
 html {
     font-size: 62.5%;
 }
 
 /* to style the body tag */
+
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1.7rem;
@@ -261,6 +266,7 @@ body {
 }
 
 /* to style the wrapper class */
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -268,12 +274,14 @@ body {
 }
 
 /* to reset the margin and padding for some elements */
+
 body, ol, h1, h2, button, input, textarea {
     margin: 0;
     padding: 0;
 }
 
 /* to style all the links */
+
 a {
     text-decoration: none;
     color: inherit;
@@ -283,6 +291,7 @@ a {
 }
 
 /* to style all the images */
+
 img {
     max-width: 100%;
     display: block;
@@ -290,6 +299,7 @@ img {
 }
 
 /* to style all the buttons */
+
 button {
     background-color: #bc0120;
     height: 40px;
@@ -300,12 +310,14 @@ button {
 }
 
 /* to style the buttons when hover or focus */
+
 button:hover, button:focus {
     background-color: #800519;
     cursor: pointer;
 }
 
 /* to style the heading(1-2)*/
+
 h1, h2 {
     color: #5C5C5C;
     text-transform: capitalize;
@@ -317,20 +329,28 @@ h1, h2 {
 }
 
 /* to style heading 1 */
+
 h1 {
-    font-size: 3rem;
-    margin-bottom: 5vh;
+    font-size: 5rem;
+    color: #800519;
+    text-align: center;
+    line-height: 6rem;
+    margin-top: 20px;
 }
 
 /* to style heading 2 */
+
 h2 {
     font-size: 2.4rem;
-    margin-bottom: 2vh;
+    margin: 30px 0;
 }
+
 /* ****************** general styles end here ****************** */
 
 /* ****************** header styles start here ****************** */
+
 /* to style the header */
+
 header {
     background-color: #fff;
     padding: 0 2%;
@@ -340,17 +360,21 @@ header {
     color: #bc0120;
     border-bottom: 1px solid #DCDBDB;
     font-size: 2.5rem;
+    min-height: 10vh;
 }
 
 /* to style the icon in the header */
+
 header i {
     cursor: pointer;
 }
+
 /* ****************** header styles end here ****************** */
 
 /* ****************** main styles start here ****************** */
+
 main {
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -358,26 +382,28 @@ main {
 }
 
 /* to style the section */
+
 section {
-    padding-left: 5%;
-    padding-top: 2vh;
-    padding: 5vh 0;
+    padding: 0 5%;
+    margin-bottom: 20px;
 }
 
 /* to stle all the forms and the .imgUploadForm div */
+
 form, .imgUploadForm div {
     display: flex;
     flex-direction: column;
 }
 
 /* to style  imgUploadForm div and the .imgUploadForm */
+
 .imgUploadForm div, .imgUploadForm {
     text-align: center;
     align-items: center;
-    margin-bottom: 5vh;
 }
 
 /* to style the img in the .imgUploadForm */
+
 .imgUploadForm img {
     width: 300px;
     margin-bottom: 5vh;
@@ -386,11 +412,13 @@ form, .imgUploadForm div {
 }
 
 /* to style the button in the imgUploadForm  */
+
 .imgUploadForm button {
     margin-bottom: 2vh;
 }
 
 /* to style the fileUploadDiv */
+
 .fileUploadtDiv {
     color: #DCDBDB;
     height: 150px;
@@ -400,11 +428,13 @@ form, .imgUploadForm div {
 }
 
 /* to style the icon in the fileUploadDiv */
+
 .fileUploadtDiv i {
     font-size: 15rem;
 }
 
 /* to style the input of type file */
+
 input[type="file"] {
     height: 150px;
     width: 200px;
@@ -416,11 +446,13 @@ input[type="file"] {
 }
 
 /* to style the dataform */
+
 .dataForm {
     border-radius: 2px;
 }
 
 /* to style the inputs and the thext area in the dataForm */
+
 .dataForm input, .dataForm textarea {
     border: none;
     width: 100%;
@@ -430,6 +462,7 @@ input[type="file"] {
 }
 
 /* to style the dataForm div */
+
 .dataForm div {
     padding: 9px;
     border: 1px solid #DDDDDD;
@@ -438,16 +471,19 @@ input[type="file"] {
 }
 
 /* to style the inputDiv */
+
 .inputDiv {
     height: 65px;
 }
 
 /* to style the textarea Div */
+
 .textareaDiv {
     height: 120px;
 }
 
 /* to style the last div in the data form */
+
 .dataForm div:last-child {
     border: none;
     margin-bottom: 0px;
@@ -455,6 +491,7 @@ input[type="file"] {
 }
 
 /* to style all the labels in the form */
+
 .dataForm label {
     display: block;
     float: left;
@@ -467,61 +504,74 @@ input[type="file"] {
 }
 
 /* to style the input and text area in focus state */
+
 .dataForm input:focus, .dataForm textarea:focus {
     box-shadow: 0 0 8px #88D5E9;
     border: 1px solid #88D5E9;
 }
 
 /* to style the textarea */
+
 .dataForm textarea {
     resize: none;
     padding-top: 5px;
 }
 
 /* to style the butto in the data form */
+
 .dataForm button {
     width: 100%;
 }
 
 /* to style the information section */
+
 .information {
     padding: 3vh 8%;
 }
 
 /* to style the ordered list in the information section */
+
 ol {
     margin-top: 2vh;
     margin-bottom: 5vh;
 }
 
 /* to style the list items and the button in the informtion section */
+
 li, .information button {
     margin-bottom: 2vh;
 }
 
 /* to style the div that contains the button */
+
 .information div {
     text-align: center;
 }
+
 /* ****************** main styles end here ****************** */
 
 /* ****************** footer styles start here ****************** */
+
 footer {
     background-color: #fbf5ed;
     color: #5C5C5C;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 10vh;
 }
+
 /* ****************** footer styles end here ****************** */
 
 /* ****************** media quries start here ****************** */
+
 @media(max-width:1165px) {
     h1 {
         font-size: calc(1vw + 1.6rem);
+        line-height: calc(1vw + 1.7rem);
     }
     h2 {
-        font-size:  calc(0.9vw + 1.6rem);
+        font-size: calc(0.9vw + 1.6rem);
     }
     .wrapper {
         width: 60%;

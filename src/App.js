@@ -227,11 +227,15 @@ class App extends Component {
       <div>
         <Header showInfo={this.showInfo} />
         <main className="wrapper">
+         
           {
             this.state.showInfo ? <Information hideInfo={this.hideInfo} /> :
               <section >
+                <h1>
+                  Turn your business cards into Contact Cards
+          </h1>
                 <form className="imgUploadForm" action="" onSubmit={this.handleSubmit}>
-                  <h1>Select a business card to upload</h1>
+                  <h2>Select a business card to upload</h2>
                   {
                     this.state.imgSrc === null ?
                       <div className="fileUploadtDiv">
