@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/abir-halwa-project-five/static/css/main.0c76799e.chunk.css",
-    "main.js": "/abir-halwa-project-five/static/js/main.000bb79b.chunk.js",
-    "main.js.map": "/abir-halwa-project-five/static/js/main.000bb79b.chunk.js.map",
+    "main.css": "/abir-halwa-project-five/static/css/main.b233b5ee.chunk.css",
+    "main.js": "/abir-halwa-project-five/static/js/main.adae9617.chunk.js",
+    "main.js.map": "/abir-halwa-project-five/static/js/main.adae9617.chunk.js.map",
     "runtime-main.js": "/abir-halwa-project-five/static/js/runtime-main.523194e9.js",
     "runtime-main.js.map": "/abir-halwa-project-five/static/js/runtime-main.523194e9.js.map",
     "static/js/2.7aad3646.chunk.js": "/abir-halwa-project-five/static/js/2.7aad3646.chunk.js",
     "static/js/2.7aad3646.chunk.js.map": "/abir-halwa-project-five/static/js/2.7aad3646.chunk.js.map",
     "index.html": "/abir-halwa-project-five/index.html",
-    "precache-manifest.6a76e2ee798ad1da34d91e108fe953f7.js": "/abir-halwa-project-five/precache-manifest.6a76e2ee798ad1da34d91e108fe953f7.js",
+    "precache-manifest.5d9a9f9f00138e4c93ef55c67b14d662.js": "/abir-halwa-project-five/precache-manifest.5d9a9f9f00138e4c93ef55c67b14d662.js",
     "service-worker.js": "/abir-halwa-project-five/service-worker.js",
-    "static/css/main.0c76799e.chunk.css.map": "/abir-halwa-project-five/static/css/main.0c76799e.chunk.css.map",
+    "static/css/main.b233b5ee.chunk.css.map": "/abir-halwa-project-five/static/css/main.b233b5ee.chunk.css.map",
     "static/js/2.7aad3646.chunk.js.LICENSE.txt": "/abir-halwa-project-five/static/js/2.7aad3646.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.523194e9.js",
     "static/js/2.7aad3646.chunk.js",
-    "static/css/main.0c76799e.chunk.css",
-    "static/js/main.000bb79b.chunk.js"
+    "static/css/main.b233b5ee.chunk.css",
+    "static/js/main.adae9617.chunk.js"
   ]
 }
