@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3527c13e5f76d27f0ffb19e84f2ba525",
+    "revision": "416b836353786f31b91253a1334ee700",
     "url": "/abir-halwa-project-five/index.html"
   },
   {
-    "revision": "c50879949838605b6075",
+    "revision": "59c9077290572d0fe961",
     "url": "/abir-halwa-project-five/static/css/main.b233b5ee.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/abir-halwa-project-five/static/js/2.7aad3646.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c50879949838605b6075",
-    "url": "/abir-halwa-project-five/static/js/main.25cede37.chunk.js"
+    "revision": "59c9077290572d0fe961",
+    "url": "/abir-halwa-project-five/static/js/main.8b11607a.chunk.js"
   },
   {
     "revision": "c5200fd1a8f829bc301e",
