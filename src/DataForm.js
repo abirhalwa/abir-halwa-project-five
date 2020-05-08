@@ -21,24 +21,31 @@ class DataForm extends Component {
     }
 
     // this function is used to save the information from the form to a V Card file
+    // TEL; type = WORK: ${ this.state.toll }
+    // NOTE: ${ this.state.other }
     saveCard = (event) => {
         event.preventDefault();
         const file = new Blob(
-            [`BEGIN: VCARD
-        VERSION: 3.0
-        FN:${this.state.name}
-        ORG:${this.state.company};
-        TITLE:${this.state.position}
-        EMAIL; type = INTERNET; type = WORK; type = pref:${this.state.email}
-        TEL;TYPE=work,voice;VALUE=uri:${this.state.phone}
-        TEL;VALUE=uri;TYPE="work,cell,voice,video,text":${this.state.mobile}
-        TEL;TYPE=FAX,WORK:${this.state.fax}
-        TEL; type = WORK:${this.state.toll}
-         URL;TYPE=WORK:${this.state.website}
-        ADR;TYPE=WORK,POSTAL,PARCEL:;;${this.state.address}
-        NOTE: ${this.state.other}
-        END:VCARD
-        `], { type: "text/vcard;charset=utf-8" });
+            [`BEGIN:VCARD
+VERSION:3.0
+FN:${this.state.name}
+item1.EMAIL;TYPE=INTERNET:${this.state.email}
+item1.X-ABLabel:
+TEL;TYPE=CELL:${this.state.mobile}
+TEL;TYPE=WORK:${this.state.phone}
+item2.TEL:${this.state.fax}
+item2.X-ABLabel:workFax
+item3.ADR:;;${this.state.address}
+item3.X-ABLabel:
+item4.ORG:${this.state.company};
+item4.X-ABLabel:
+item5.TITLE:${this.state.position}
+item5.X-ABLabel:
+item6.URL:${this.state.website}
+item6.X-ABLabel:
+CATEGORIES:myContacts
+END:VCARD
+            `], { type: "text/vcard;charset=utf-8" });
         FileSaver.saveAs(
             file,
             `${this.state.name}.vcf`,
