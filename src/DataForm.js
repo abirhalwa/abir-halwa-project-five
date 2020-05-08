@@ -21,8 +21,7 @@ class DataForm extends Component {
     }
 
     // this function is used to save the information from the form to a V Card file
-    // TEL; type = WORK: ${ this.state.toll }
-    // NOTE: ${ this.state.other }
+    
     saveCard = (event) => {
         event.preventDefault();
         const file = new Blob(
@@ -35,14 +34,17 @@ TEL;TYPE=CELL:${this.state.mobile}
 TEL;TYPE=WORK:${this.state.phone}
 item2.TEL:${this.state.fax}
 item2.X-ABLabel:workFax
-item3.ADR:;;${this.state.address}
-item3.X-ABLabel:
-item4.ORG:${this.state.company};
+item3.TEL:${ this.state.toll }
+item3.X-ABLabel:Toll Free
+item4.ADR:;;${this.state.address}
 item4.X-ABLabel:
-item5.TITLE:${this.state.position}
+item5.ORG:${this.state.company};
 item5.X-ABLabel:
-item6.URL:${this.state.website}
+item6.TITLE:${this.state.position}
 item6.X-ABLabel:
+item7.URL:${this.state.website}
+item7.X-ABLabel:
+NOTE: ${ this.state.other }
 CATEGORIES:myContacts
 END:VCARD
             `], { type: "text/vcard;charset=utf-8" });
