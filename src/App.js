@@ -169,8 +169,8 @@ class App extends Component {
   //an event handler fires when the form is submitted 
   handleSubmit = (event) => {
     event.preventDefault();
-    const url = 'https://canadacentral.api.cognitive.microsoft.com/vision/v2.1/ocr';
-    let subscriptionKey ='7123281bd59d470cb1be4c80854ff7c6';
+    const url = 'https://abirvision.cognitiveservices.azure.com/vision/v3.0/ocr';
+    let subscriptionKey ='fb000dd4edb34ee69cb43359984ee319';
     var formData = new FormData();
     formData.append('file', this.state.imgFile);
     var options = {
@@ -188,7 +188,7 @@ class App extends Component {
       });
       this.analyzeData();
     }).catch(() => {
-      alert(`Your order can't be processed now please try again later`);
+      alert(`Your order can't be processeded right now please try again later`);
     });
   };
 

@@ -17,6 +17,7 @@ class DataForm extends Component {
             toll: '',
             address: '',
             other: '',
+            dialogOpen: false,
         };
     }
 
@@ -24,6 +25,7 @@ class DataForm extends Component {
     
     saveCard = (event) => {
         event.preventDefault();
+
         const file = new Blob(
             [`BEGIN:VCARD
 VERSION:3.0
@@ -85,8 +87,9 @@ END:VCARD
     }
     render() {
         return (
+            <div>
             <form className="dataForm" onSubmit={this.saveCard}>
-                <h2>Business Card Data</h2>
+                              <h2>Business Card Data</h2>
                 <div className="inputDiv">
                     <label htmlFor="company">Company Name</label>
                     <input type="text" id="company" defaultValue={this.state.company} onChange={this.handleInputChange} />
@@ -137,6 +140,23 @@ END:VCARD
                 </div>
                 <button type="submit">Save as a conatct card</button>
             </form >
+              {this.state.dialogOpen?
+                <div class="dialog">
+                            <form>
+                                <h1>Export as</h1>
+                                <input type="radio" id="male" name="gender" value="male"></input>
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female"></input>
+                                <label for="female">Female</label>
+                                <input type="radio" id="other" name="gender" value="other"></input>
+                                <label for="other">Other</label>
+                                <button type="submit">Export</button>
+                               <button >Cancel</button>
+                            </form>
+                </div>
+                : null}
+            </div>
+            
         )
     }
 }
