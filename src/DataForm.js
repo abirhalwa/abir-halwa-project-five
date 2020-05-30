@@ -18,16 +18,41 @@ class DataForm extends Component {
             address: '',
             other: '',
             dialogOpen: false,
+            selectedOption:'',
         };
     }
 
+    showDialog= (event)=>{
+        event.preventDefault();
+        this.setState({
+            dialogOpen: true,
+        });
+    }
+
+    closeDialog = (event) => {
+        event.preventDefault();
+        this.setState({
+            dialogOpen: false,
+        });
+    }
+    onValueChange=(event)=>{
+        this.setState({
+            selectedOption: event.target.value
+        });
+    }
     // this function is used to save the information from the form to a V Card file
     
-    saveCard = (event) => {
+    exportContact = (event) => {
         event.preventDefault();
-
-        const file = new Blob(
-            [`BEGIN:VCARD
+        this.setState({
+            dialogOpen: false,
+        });
+        const fileType= this.state.selectedOption;
+        let file;
+        switch(fileType){
+            case 'ios':
+               file = new Blob(
+                    [`BEGIN:VCARD
 VERSION:3.0
 FN:${this.state.name}
 item1.EMAIL;TYPE=INTERNET:${this.state.email}
@@ -36,7 +61,7 @@ TEL;TYPE=CELL:${this.state.mobile}
 TEL;TYPE=WORK:${this.state.phone}
 item2.TEL:${this.state.fax}
 item2.X-ABLabel:workFax
-item3.TEL:${ this.state.toll }
+item3.TEL:${ this.state.toll}
 item3.X-ABLabel:Toll Free
 item4.ADR:;;${this.state.address}
 item4.X-ABLabel:
@@ -46,15 +71,51 @@ item6.TITLE:${this.state.position}
 item6.X-ABLabel:
 item7.URL:${this.state.website}
 item7.X-ABLabel:
-NOTE: ${ this.state.other }
+NOTE: ${ this.state.other}
 CATEGORIES:myContacts
 END:VCARD
             `], { type: "text/vcard;charset=utf-8" });
-        FileSaver.saveAs(
-            file,
-            `${this.state.name}.vcf`,
-            true
-        );
+                FileSaver.saveAs(
+                    file,
+                    `${this.state.name}.vcf`,
+                    true
+                );
+                break;
+    case 'csv': 
+                var address = this.state.address.replace(/,/g, " ");
+                file = new Blob(
+                    [`Name,E-mail Address,Business Phone,Mobile Phone,Business Fax,TTY/TDD Phone,Job Title,Company,Address 1 - Formatted,Web Page,Notes
+${this.state.name},${this.state.email},${this.state.phone},${this.state.mobile},${this.state.fax},${this.state.toll},${this.state.position},${this.state.company},${address},${this.state.website},${this.state.other}`], {type: "text/csv;charset=utf-8" }); 
+                FileSaver.saveAs(
+                    file,
+                    `${this.state.name}.csv`,
+                    true
+                );
+    break;
+default:
+                file = new Blob(
+                    [`BEGIN:VCARD
+VERSION:2.1
+FN:${this.state.name}
+TEL;CELL:${this.state.mobile}
+TEL;WORK:${this.state.phone}
+TEL;WORK;FAX:${this.state.fax}
+TEL;X-CUSTOM(CHARSET=UTF-8,ENCODING=QUOTED-PRINTABLE,=54=6F=6C=6C=20=46=72=65=65):${ this.state.toll}
+EMAIL;WORK:${this.state.email}
+ADR;WORK:;;${this.state.address}
+ORG:${this.state.company};
+TITLE:${this.state.position}
+URL:${this.state.website}
+NOTE: ${ this.state.other}
+END:VCARD
+            `], { type: "text/vcard;charset=utf-8" });
+                FileSaver.saveAs(
+                    file,
+                    `${this.state.name}.vcf`,
+                    true
+                );
+        }
+       
     }
 
     // this event handler to handle any text input/textarea change 
@@ -88,7 +149,7 @@ END:VCARD
     render() {
         return (
             <div>
-            <form className="dataForm" onSubmit={this.saveCard}>
+            <form className="dataForm" onSubmit={this.showDialog}>
                               <h2>Business Card Data</h2>
                 <div className="inputDiv">
                     <label htmlFor="company">Company Name</label>
@@ -138,20 +199,32 @@ END:VCARD
                     <label htmlFor="other">Other Details</label>
                     <textarea type="text" id="other" defaultValue={this.state.other} onChange={this.handleInputChange} />
                 </div>
-                <button type="submit">Save as a conatct card</button>
+                <button type="submit">Export Contact</button>
             </form >
               {this.state.dialogOpen?
                 <div class="dialog">
-                            <form>
-                                <h1>Export as</h1>
-                                <input type="radio" id="male" name="gender" value="male"></input>
-                                <label for="male">Male</label>
-                                <input type="radio" id="female" name="gender" value="female"></input>
-                                <label for="female">Female</label>
-                                <input type="radio" id="other" name="gender" value="other"></input>
-                                <label for="other">Other</label>
+                            <form onSubmit={this.exportContact}>
+                                <h1>Export Contact</h1>
+                                <h2>Export as</h2>
+                                <div>
+                                <input type="radio" id="ios" name="file" value="ios" checked={this.state.selectedOption === "ios"}
+                                    onChange={this.onValueChange}></input>
+                                <label for="ios">VCard (for IOS/Google Contacts)</label>
+                                </div>
+                                <div>
+                                <input type="radio" id="csv" name="file" value="csv" checked={this.state.selectedOption === "csv"}
+                                    onChange={this.onValueChange}></input>
+                                <label for="female">Outlook CSV</label>
+                                </div>
+                                <div>
+                                <input type="radio" id="android" name="file" value="android" checked={this.state.selectedOption === "android"}
+                                    onChange={this.onValueChange}></input>
+                                <label for="android">VCard (for Andriod Contacts)</label>
+                                </div>
+                               <div class="buttonDiv">
                                 <button type="submit">Export</button>
-                               <button >Cancel</button>
+                                <button onClick={this.closeDialog} >Cancel</button>
+                               </div>
                             </form>
                 </div>
                 : null}
