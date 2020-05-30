@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/abir-halwa-project-five/precache-manifest.867db90c52d8ca9476b88ba2db76f6ad.js"
+  "/abir-halwa-project-five/precache-manifest.77c9148644a64ecc7371cd4c848c1828.js"
 );
 
 self.addEventListener('message', (event) => {
